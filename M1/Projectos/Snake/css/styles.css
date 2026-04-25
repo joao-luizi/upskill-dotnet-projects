@@ -1,0 +1,190 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+table{
+    border: 2px double black;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-left: auto;  
+    margin-right: auto;  
+    
+
+}
+td{
+    padding: 0px;
+    margin: 0px;
+     width: 64px;
+    height: 64px;
+}
+.container{
+    /* border:  1px solid red; */
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.aside{
+    /* border:  1px solid blue; */
+    width: 10%;
+    margin-left: 5px;
+    float: left;
+    height: 250px;
+    text-align: center;
+}
+.aside button{
+    margin-top: 10px;
+}
+.gameover{
+    background-image: url(../img/gameover.png);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: 40px 40px;
+    background-color: white;
+    display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.paused {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+.gridCellEmpty{
+    background-color: white;
+    width: 64px;
+    height: 64px;
+}
+
+.gridCellGeneric{
+    background-color: red;
+}
+
+.gridHeadUp{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -192px 0px;
+    background-repeat: no-repeat;
+
+}
+
+.gridHeadDown{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -256px -64px;
+    background-repeat: no-repeat;
+
+}
+
+.gridHeadLeft{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -192px -64px;
+    background-repeat: no-repeat;
+
+}
+
+.gridHeadRight{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -256px 0px;
+    background-repeat: no-repeat;
+
+}
+
+.gridTailUp{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -192px -128px;
+    background-repeat: no-repeat;
+}
+
+.gridTailDown{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -256px -192px;
+    background-repeat: no-repeat;
+}
+
+.gridTailLeft{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -192px -192px;
+    background-repeat: no-repeat;
+}
+
+.gridTailRight{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -256px -128px;
+    background-repeat: no-repeat;
+}
+
+.gridBodyHorizontal{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -64px 0px;
+    background-repeat: no-repeat;
+}
+
+.gridBodyVertical{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -128px -64px;
+    background-repeat: no-repeat;
+}
+
+.gridBodyRightDown{
+    background-image:url(../img/snake-graphics.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.gridBodyRightUp{
+    background-image:url(../img/snake-graphics.png);
+    background-position: 0px -64px;
+    background-repeat: no-repeat;
+}
+
+.gridBodyLeftDown{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -128px 0px;
+    background-repeat: no-repeat;
+}
+
+.gridBodyLeftUp{
+    background-image:url(../img/snake-graphics.png);
+    background-position: -128px -128px;
+    background-repeat: no-repeat;
+}
+
+.gridFood{
+    background-image:url(../img/snake-graphics.png);
+    background-position: 0px -192px;
+    background-repeat: no-repeat;
+}
+

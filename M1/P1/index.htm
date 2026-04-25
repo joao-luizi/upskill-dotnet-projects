@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestão de Veículos</title>
+<link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+    <div id="topo">
+        <h1>Gestão de Veículos</h1>
+
+        <button id="carregarLS">(Re)Inicializar BD</button>
+        <button id="limparLS">Limpar BD</button>
+
+        <h2>Adicionar / Editar Veículo</h2>
+        <form id="formVeiculo">
+            <input type="hidden" id="editIndex" />
+            <input type="text" id="marca" placeholder="Marca" required />
+            <input type="text" id="modelo" placeholder="Modelo" required />
+            <input type="number" id="ano" placeholder="Ano" required />
+            <input type="date" id="inspecao" required />
+            <label><input type="checkbox" id="vendido" /> Vendido</label>
+            <button type="submit">Guardar</button>
+        </form>
+        
+        <h2>Filtros</h2>
+        <div class="display-flex">            
+            <div class="display-flex">
+                <select id="fMarca">
+                    <option value="">Todas as marcas</option>
+                </select>
+                <button sortKey ="marca" class ="orderButton" id="fMarcaSortOrder">
+                ↑
+                </button>
+            </div>
+            <div class="display-flex">
+                <select id="fAno">
+                    <option value="">Todos os anos</option>
+                </select>
+                <button sortKey ="ano" class ="orderButton" id="fAnoSortOrder">
+                ↑
+                </button>
+            </div>
+            <div>
+                <select id="fVendido">
+                    <option value="">Todos</option>
+                    <option value="false">Disponíveis</option>
+                    <option value="true">Vendidos</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Ano</th>
+                <th>Última Inspeção</th>
+                <th>Estado</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela"></tbody>
+    </table>
+
+<script src="./js/db.js"></script>
+<script src="./js/ui.js"></script>
+<script src="./js/utils.js"></script>
+<script src="./js/app.js"></script>
+<script>
+    Init()
+</script>
+</body>
+
+</html>

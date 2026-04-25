@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loja de Cursos</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/curso.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="ten columns login-row">
+                    <img src="img/logo.jpg" id="logo">
+                    <div id="login-welcome" class="marginL-auto"></div>
+                    <img src="img/fireGray.png" class="marginL-auto" alt="" id="btn-top5">
+                    <a href="#" id="favoritos" class="marginL-10 no-decor">❤️</a>
+                    <button class="login-btn marginL-10" aria-label="User profile" id="login-button">
+                        <img src="img/ProfileGuest.png" alt="">
+                    </button>
+                </div>
+                <div class="two columns u-pull-right">
+                    <ul>
+                        <li class="submenu">
+                            <img src="img/cart.png" id="img-carrinho">
+                            <div id="carrinho">
+
+                                <table id="lista-carrinho" class="u-full-width">
+                                    <thead>
+                                        <tr>
+                                            <th>Foto</th>
+                                            <th>Nome</th>
+                                            <th>Preço</th>
+                                            <th>Quantidade</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <a href="#" id="limpar-carrinho" class="button u-full-width">Esvaziar Carrinho</a>
+                                <a href="#" id="finalizar-carrinho" class="button u-full-width">Finalizar Compra</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="curso-hidden curso-container" id="container-addcurso">
+                    <h2>Adicionar Curso</h2>
+                    <form id="addCurso" class="curso-form">
+                        <div class="curso-body">
+                            <div>
+                                <div>
+                                    <label for="ISBN"><b>ISBN</b></label>
+                                    <input id="ISBN" class="login-input" type="text" placeholder="ISBN" name="ISBN"
+                                        required>
+                                </div>
+                                <div class="marginL-10">
+
+                                    <label for="autor"><b>Autor</b></label>
+                                    <input id="autor" class="login-input" type="text" placeholder="Autor" name="autor"
+                                        required>
+                                </div>
+                            </div>
+                            <label for="titulo"><b>Titulo</b></label>
+                            <input id="titulo" class="login-input" type="text" placeholder="Titulo" name="titulo"
+                                required>
+                            <label for="categoria"><b>Categoria</b></label>
+                            <input id="categoria" class="login-input" type="text" placeholder="Categoria"
+                                name="categoria" required>
+                            <div class="flex-display">
+                                <div>
+                                    <label for="preco"><b>Preco</b></label>
+                                    <input id="preco" class="login-input" type="number" placeholder="Preco" name="preco"
+                                        required>
+                                </div>
+                                <div class="marginL-10">
+                                    <label for="promocao"><b>Promocao</b></label>
+                                    <select id="promocao" name="promocao" form="addCurso">
+                                        <option value="false">Não</option>
+                                        <option value="true">Sim</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="flex-display">
+                                <div>
+
+                                    <label for="rating"><b>Rating</b></label>
+                                    <select id="rating" name="rating" form="addCurso">
+                                        <option value="5">5</option>
+                                        <option value="4">4</option>
+                                        <option value="5">3</option>
+                                        <option value="3">2</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                </div>
+                                <div class="marginL-10">
+
+                                    <label for="imagem"><b>Imagem</b></label>
+                                    <input id="imagem" type="text" placeholder="Imagem" name="imagem" required>
+                                </div>
+
+                            </div>
+                            <div>
+                                <label for="info">Informação</label>
+                                <textarea name="info" id="info" cols="30" rows="10"></textarea>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="curso-footer">
+                            <button type="button" class="login-button login-cancelbtn"
+                                id="addCurso-cancelbtn">Cancelar</button>
+                            <button class="add-button" type="submit">Adicionar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="login-hidden login-container" id="container-confirm">
+                    <h2>Confirm Login</h2>
+                    <form id="confirmForm" class="login-form">
+                        <div class="login-container">
+                            <label for="confirmUname"><b>Username</b></label>
+                            <input id="confirmUname" class="login-input" type="text" placeholder="Username" name="uname"
+                                required>
+
+                            <label for="confirmPsw"><b>Password</b></label>
+                            <input id="confirmPsw" class="login-input" type="password" placeholder="Password" name="psw"
+                                required>
+
+                            <button class="login-button" type="submit">Login</button>
+
+                        </div>
+                        <div class="login-container login-row backgroundf1">
+                            <button id="confirm-cancelbtn" type="button"
+                                class="login-button login-cancelbtn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="login-hidden login-container" id="container-login">
+                    <h2>Login Form</h2>
+
+                    <form id="loginForm" class="login-form">
+
+                        <div class="login-container">
+                            <label for="inputUname"><b>Username</b></label>
+                            <input id="inputUname" class="login-input" type="text" placeholder="Username" name="uname"
+                                required>
+
+                            <label for="inputPsw"><b>Password</b></label>
+                            <input id="inputPsw" class="login-input" type="password" placeholder="Password" name="psw"
+                                required>
+                            <input id="toggleShowPsw" class="login-input" type="checkbox"> Show Password
+                            <button class="login-button" type="submit">Login</button>
+
+                        </div>
+
+                        <div class="login-container login-row backgroundf1">
+                            <button id="login-cancelbtn" type="button"
+                                class="login-button login-cancelbtn">Cancel</button>
+                            <button id="login-logout" type="button" class="login-button login-cancelbtn">LogOut</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="login-backdrop login-backdrop-hidden" id="login-backdrop"></div>
+
+                <div class="six columns">
+                    <div class="conteudo-hero">
+                        <h2>Aprende algo novo</h2>
+                        <p>Todos os cursos a 15€</p>
+                        <form action="#" id="pesquisa" method="post" class="formulario">
+                            <input class="u-full-width" type="text" placeholder="Que gostarias de aprender?"
+                                id="buscador">
+                            <input type="submit" id="submit-buscador" class="submit-buscador">
+                        </form>
+                        <a href="#" id="adicionar-curso" class="button u-middle-width inserir-curso">Adicionar Curso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                <div class="four columns icon icon1">
+                    <p>20,000 Cursos online <br>
+                        Explora os temas mais recentes</p>
+                </div>
+                <div class="four columns icon icon2">
+                    <p>Formadores Experientes <br>
+                        Aprende com estilo</p>
+                </div>
+                <div class="four columns icon icon3">
+                    <p>Acesso vitalicio<br>
+                        Aprende ao teu ritmo</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <div class="container">
+        <select name="category" id="category-filter">
+            <option value="">Todos</option>
+        </select>
+    </div>
+    <div id="top5-container" class="container none-display marginB-50 top5-style-a">
+        <div class="top5-style-a">
+            <h2 class="top5-style-b">
+                <img src="img/fireRed.png" alt="" class="badge-top5"> Cursos Mais Vendidos
+            </h2>
+            <div class="top5-style-c">
+            </div>
+        </div>
+        <div id="top5-list" class="row u-cf top5-flex"></div>
+    </div>
+    <div id="lista-cursos" class="container"></div>
+    <div id="paginacao" class="container"></div>
+
+    <div id="modal-detalhes" class="curso-hidden">
+        <div class="curso-container">
+            <div class="curso-body">
+                <h2 id="modal-titulo"></h2>
+                <p id="modal-descricao"></p>
+            </div>
+            <div class="curso-footer">
+                <button class="button" onclick="fecharModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <nav id="principal" class="menu">
+                        <a class="lnk" href="#">Para o teu Negócio</a>
+                        <a class="lnk" href="#">Torna-te Formador</a>
+                        <a class="lnk" href="#">Aplicações Móveis</a>
+                        <a class="lnk" href="#">Suporte</a>
+                        <a class="lnk" href="#">Temas</a>
+                    </nav>
+                </div>
+                <div class="four columns">
+                    <nav id="secundaria" class="menu">
+                        <a class="lnk" href="#">Quem Somos?</a>
+                        <a class="lnk" href="#">Ofertas de Emprego</a>
+                        <a class="lnk" href="#">Blog</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ui.js"></script>
+    <script>Init()</script>
+</body>
+
+</html>
